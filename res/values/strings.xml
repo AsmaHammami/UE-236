@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Appli Contact</string>
+    <string name="liste_contacts">Liste des Contacts</string>
+     <string name="btn_valider">Valider</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

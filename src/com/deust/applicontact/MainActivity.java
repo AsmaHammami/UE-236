@@ -1,9 +1,12 @@
 package com.deust.applicontact;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.*;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 
@@ -31,6 +34,16 @@ public class MainActivity extends Activity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
         android.R.layout.simple_list_item_1, mes_contacts);
         monListView.setAdapter(adapter);
+        
+        final Button monbutton1 = (Button) findViewById(R.id.button1);
+        monbutton1.setOnClickListener(new OnClickListener() {
+                   
+        @Override
+        public void onClick(View v) {
+          Intent intent = new Intent(MainActivity.this, MainActivitySecond.class);
+          startActivity(intent);
+          }
+      });
         
         
         

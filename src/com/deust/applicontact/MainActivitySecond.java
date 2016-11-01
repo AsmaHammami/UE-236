@@ -35,7 +35,7 @@ public class MainActivitySecond extends Activity {
     public void onClick(View v) {
 
 	     Toast.makeText(getApplicationContext(),
-                      "Vers Activité MainActivity", Toast.LENGTH_LONG).show();
+                      "Vers la première activité", Toast.LENGTH_LONG).show();
       Intent intent2 = new Intent(MainActivitySecond.this, MainActivity.class);
       startActivity(intent2);
       }

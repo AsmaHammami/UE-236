@@ -2,8 +2,6 @@
 <resources>
 
     <string name="app_name">APP Contact </string>
-    <string name="app_name1">APP Contact (1)</string>
-    <string name="app_name2">APP Contact (2)</string>
     <string name="liste_contacts">Liste des Contacts</string>
      <string name="btn_valider">Valider</string>
      <string name="btn_annuler">Annuler</string>

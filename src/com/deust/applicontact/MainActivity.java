@@ -1,5 +1,7 @@
 package com.deust.applicontact;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,9 +33,20 @@ public class MainActivity extends Activity {
         //android.R.layout.simple_list_item_1 est une vue disponible de base dans le SDK android,
         //Contenant une TextView avec comme identifiant "@android:id/text1"
  
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
+        /*ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
         android.R.layout.simple_list_item_1, mes_contacts);
-        monListView.setAdapter(adapter);
+        monListView.setAdapter(adapter);*/
+        
+        //Récupération de la liste des personnes
+        ArrayList<Contact> listP = Contact.Initialiser(); 
+//Création et initialisation de l'Adapter pour les contact   
+        ContactAdapter adapter = new ContactAdapter(this, listP); 
+//Récupération du composant ListView
+        ListView list = (ListView)findViewById(R.id.listViewContacts); 
+//Initialisation de la liste avec les données
+        list.setAdapter(adapter); 
+        
+        
         
         final Button monbutton1 = (Button) findViewById(R.id.button1);
         monbutton1.setOnClickListener(new OnClickListener() {
